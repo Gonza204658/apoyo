@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SOBRE MÍ</title>
+
+    <link rel="shortcut icon" href="../logo.png" type="image/png">
+    <link rel="stylesheet" href="min.css">
+</head>
+
+<body>
+
+<div id="particles-js"></div>
+
+<header class="header">
+    <div class="logo">
+        <img src="../logo.png" alt="Logo Diego" class="imagen">
+    </div>
+
+    <nav>
+        <ul class="nav_links">
+            <li><a href="#sobre-mi" class="navegar">SOBRE DIEGO</a></li>
+            <li><a href="mascotas.html" class="navegar">MASCOTAS</a></li>
+            <li><a href="#proyectos" class="navegar">PROYECTOS</a></li>
+        </ul>
+    </nav>
+
+    <a href="#CONTACTAME" class="navegar">
+        <button>CONTACTANOS</button>
+    </a>
+</header>
+
+<h1>DIEGO FERNANDO GONZALEZ</h1>
+
+<div class="cuadro_de_mi">
+    <section id="sobre-mi">
+        <h2 class="texto"><strong>UN POCO SOBRE MÍ</strong></h2>
+
+        <p class="texto1" data-expandido="false">
+            Mi nombre es <strong>Diego Fernando Gonzalez</strong>, tengo 19 años, estudio
+            <strong>Ingeniería Industrial</strong> en la Universidad de la Costa y también curso
+            <strong>Desarrollo de Software</strong>. ¡Haz clic en "Ver más" para saber más sobre mí!
+        </p>
+
+        <button id="btn-leer-mas" onclick="toggleTextoSobreMi()">Ver más ▼</button>
+    </section>
+</div>
+
+<img src="../imagende_diego.jpeg" class="imagen" alt="Foto de Diego">
+
+<section id="proyectos">
+    <h2 class="referencias">MIS PROYECTOS</h2>
+
+    <div class="grid_proyectos">
+
+        <div class="card" onclick="mostrarTexto(this)">
+            <h3>Saber Pro</h3>
+            <p class="textoOculto oculto">
+                Página con juego interactivo para estudiar.
+                Esta página la realicé para un proyecto de la Universidad.
+                <br><br>
+                <a href="https://69e0cefe17ba6400de30561c--frolicking-flan-251a08.netlify.app/" onclick="event.stopPropagation()">
+                    <button class="ver2">Ver página</button>
+                </a>
+            </p>
+        </div>
+
+        <div class="card" onclick="mostrarTexto(this)">
+            <h3>Calculadora</h3>
+            <p class="textoOculto oculto">
+                Calculadora hecha con JavaScript.
+            </p>
+        </div>
+
+        <div class="card" onclick="mostrarTexto(this)">
+            <h3>Galería</h3>
+            <p class="textoOculto oculto">
+                Galería de mascotas con diseño responsive.
+            </p>
+        </div>
+
+    </div>
+</section>
+
+<div class="FOR">
+    <section id="CONTACTAME">
+        <h2 class="contactame">CONTACTANOS</h2>
+
+        <form class="formulario">
+            <br>
+            <label><b>NOMBRE</b><br>
+                <input type="text" name="name" placeholder="Escribe tu nombre" required class="formulario_input">
+            </label>
+
+            <br><br>
+
+            <label><b>TELEFONO</b><br>
+                <input type="tel" pattern="[0-9]+" name="Telefono1" placeholder="ej 3002666030" required minlength="10" class="formulario_input">
+            </label>
+
+            <br><br>
+
+            <label><b>CORREO</b><br>
+                <input type="email" name="Correo" placeholder="ej correo@gmail.com" required class="formulario_input">
+            </label>
+
+            <br><br>
+
+            <h3><b>TE PODEMOS CONTACTAR POR</b></h3>
+
+            <label>
+                <input type="radio" name="Contacto" required class="formulario_input"> Correo
+            </label>
+            <label>
+                <input type="radio" name="Contacto" required class="formulario_input"> Teléfono
+            </label>
+
+            <br><br>
+
+            <h3><b>INGRESE SUS DUDAS</b></h3>
+            <br>
+            <label>
+                <textarea placeholder="Escribe tu mensaje aquí"></textarea>
+            </label>
+
+            <br><br>
+
+            <label><b>FECHA DE NACIMIENTO</b><br>
+                <input type="date" name="fecha" required class="formulario_input">
+            </label>
+
+            <br><br>
+
+            <input type="submit" value="ENVIAR" class="formulario_input btn">
+
+            <p id="mensaje-confirmacion"></p>
+        </form>
+    </section>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
+<script src="particles-config.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
